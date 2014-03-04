@@ -31,6 +31,36 @@ function sumIntervals(ary){
 }
 
 
-var ary = [-1,-3,-8,-2,-1,-10,-2,-1];
+//o(n) opt time o(1) space
+//BUT - requires at least 1 positive integer
+function sumIntervalsTimeOpt(ary){
+    var returnme =undefined;
+    var max = undefined;
+    var start =0;
+    var end = 0;
+    var sum =ary[0];
+    for(var i=0;i<ary.length;i++){
+        if (sum>max || max === undefined){
+            max = sum;
+            returnme = {
+                start:start,
+                end:end,
+                sum:sum
+            }
+        }
+
+        if (sum < 0){
+            start = i; end = i; sum = ary[i]; continue;
+        }
+        if (i!=0){ //we already accounted for i=0 in sum's def
+            sum+=ary[i];
+        }
+        end = i;
+    }
+    return returnme;
+
+}
+
+var ary = [1,-3,-8,-2,-1,-10,-2,-1];
 //var ary = [1,3, -8, 2, -1, 10, -2, 1];
-console.log(sumIntervals(ary));
+console.log(sumIntervalsTimeOpt(ary));
