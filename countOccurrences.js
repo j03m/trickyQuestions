@@ -1,3 +1,4 @@
+http://basicalgos.blogspot.com/2012/02/3.html
 
 //do a binary search
 function countOccurrences(ary, number){
