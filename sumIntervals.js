@@ -32,9 +32,11 @@ function sumIntervals(ary){
 
 
 //o(n) opt time o(1) space
-//BUT - requires at least 1 positive integer
+//Incorrect solution :(
+//BUT - requires at least 1 positive integer, seems to neglect the last int
 function sumIntervalsTimeOpt(ary){
     var returnme =undefined;
+
     var max = undefined;
     var start =0;
     var end = 0;
@@ -61,8 +63,9 @@ function sumIntervalsTimeOpt(ary){
 
 }
 
-var ary = [1,-3,-8,-2,-1,-10,-2,4];    //one positive
+//var ary = [1,-3,-8,-2,-1,-10,-2,-1];    //one positive
+var ary = [1,-3,-8,-2,-1,-10,3,4];    //first and last positive
 //var ary = [-1,-3,-8,-2,-1,-10,-2,-1]; // all neg
 //var ary = [1,3, -8, 2, -1, 10, -2, 1]; //mix
 
-console.log(sumIntervals(ary));
+console.log(sumIntervalsTimeOpt(ary));
