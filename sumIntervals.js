@@ -61,6 +61,8 @@ function sumIntervalsTimeOpt(ary){
 
 }
 
-var ary = [1,-3,-8,-2,-1,-10,-2,-1];
-//var ary = [1,3, -8, 2, -1, 10, -2, 1];
+var ary = [1,-3,-8,-2,-1,-10,-2,-1];    //one positive
+//var ary = [-1,-3,-8,-2,-1,-10,-2,-1]; // all neg
+//var ary = [1,3, -8, 2, -1, 10, -2, 1]; //mix
+
 console.log(sumIntervalsTimeOpt(ary));
