@@ -1,3 +1,5 @@
+
+//http://basicalgos.blogspot.com/2012/02/string-reduction-given-string.html
 function reduce(input){
     var p1 =0;
     var p2 =1;
@@ -41,5 +43,6 @@ function reduce(input){
 }
 
 var input = "cccccccccccccccab";
-var len = reduce(input);
+var len = reduce(input); //o(n^2)
 console.log(len);
+
