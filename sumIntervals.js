@@ -10,7 +10,7 @@ function sumIntervals(ary){
     //todo base check, is undefined, is an array etc
 
     for(var i=0;i<ary.length;i++){
-        var sum = ary[0];
+        var sum = 0;
         sum+=ary[i];
         var start = i;
         for(var ii=i+1;ii<ary.length;ii++){
@@ -61,8 +61,8 @@ function sumIntervalsTimeOpt(ary){
 
 }
 
-var ary = [1,-3,-8,-2,-1,-10,-2,-1];    //one positive
+var ary = [1,-3,-8,-2,-1,-10,-2,4];    //one positive
 //var ary = [-1,-3,-8,-2,-1,-10,-2,-1]; // all neg
 //var ary = [1,3, -8, 2, -1, 10, -2, 1]; //mix
 
-console.log(sumIntervalsTimeOpt(ary));
+console.log(sumIntervals(ary));
