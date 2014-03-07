@@ -1,3 +1,5 @@
+//stab at a finite state automata - reading a bit this is not the right way to 
+//to implement these, but it works. Will update.
 var gConfig = {
     s1:{
         initial:true,
