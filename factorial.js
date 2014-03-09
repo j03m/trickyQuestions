@@ -20,15 +20,33 @@ function factorial(n){
 }
 
 
+function factorialTail (n)
+{
+    function fac_helper (n, fac)
+    {
+        if (n <= 1)
+            return fac ;
+        return fac_helper (n - 1, n * fac) ;
+    }
+
+    return fac_helper (n, 1) ;
+}
+
 
 var start = Date.now();
-for(var i=0;i<100000;i++){
+for(var i=0;i<1000000;i++){
     factorialRec(Math.floor(Math.random()*100 + 1));
 }
 console.log("Time:" + (Date.now()-start))
 
 var start = Date.now();
-for(var i=0;i<100000;i++){
+for(var i=0;i<1000000;i++){
     factorial(Math.floor(Math.random()*100 + 1));
+}
+console.log("Time:" + (Date.now()-start));
+
+var start = Date.now();
+for(var i=0;i<1000000;i++){
+    factorialTail(Math.floor(Math.random()*100 + 1));
 }
 console.log("Time:" + (Date.now()-start))
