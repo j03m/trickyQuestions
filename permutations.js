@@ -36,5 +36,7 @@ Permuter.prototype.permuteIt = function(ary, start){
 }
 
 var permer = new Permuter()
-permer.permuteIt("dogs".split(''));
+permer.permuteIterative("dogs".split(''));
 console.log(permer.permutations);
+
+
