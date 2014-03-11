@@ -54,8 +54,13 @@ Tree.prototype.hasChildForLetter= function(letter, parent){
 
 Tree.prototype.suggest = function(str){
     var fanOut = this.visit(this.root, str);
-    var suggestions = this.collect(fanOut);
-    return suggestions;
+    if (fanOut){
+        var suggestions = this.collect(fanOut);
+        return suggestions;
+    }else{
+        return [];
+    }
+
 }
 
 Tree.prototype.translate = function(digits){
@@ -120,13 +125,14 @@ Tree.prototype.visit = function(node, str, pos){
         for(var i=0;i<node.children.length;i++){
             if (node.children[i].letter == letter){
                 pos++;
+                returnme = node.children[i];
                 queue.push(node.children[i]);
             }
         }
         if (queue.length > 0){
             node = queue.shift();
         }else{
-            returnme = node;
+
             break;
         }
     }
