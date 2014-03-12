@@ -149,6 +149,7 @@ var words = [
     "i",
     "if",
     "who",
+    "wore",
     "where",
     "all"
 ]
@@ -158,7 +159,8 @@ for(var i =0;i<words.length;i++){
 console.log(JSON.stringify(tree, null, '\t'));
 
 
-console.log(tree.translate([2,3]));
+//console.log(tree.translate([2,3]));
+console.log(tree.translate([9,6]));
 
 
 
